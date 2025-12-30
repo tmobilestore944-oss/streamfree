@@ -16,7 +16,9 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -157,8 +159,15 @@ a {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(30px, -30px) scale(1.1); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
 }
 
 .hero-content {
@@ -188,8 +197,15 @@ a {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 .hero h1 {
@@ -365,12 +381,29 @@ a {
     margin-bottom: 16px;
 }
 
-.icon.netflix { background: linear-gradient(135deg, #e50914, #b20710); }
-.icon.disney { background: linear-gradient(135deg, #113ccf, #0e1f5b); }
-.icon.hulu { background: linear-gradient(135deg, #1ce783, #168b50); }
-.icon.hbo { background: linear-gradient(135deg, #5822b4, #9b59b6); }
-.icon.bbc { background: linear-gradient(135deg, #000, #333); }
-.icon.prime { background: linear-gradient(135deg, #00a8e1, #146eb4); }
+.icon.netflix {
+    background: linear-gradient(135deg, #e50914, #b20710);
+}
+
+.icon.disney {
+    background: linear-gradient(135deg, #113ccf, #0e1f5b);
+}
+
+.icon.hulu {
+    background: linear-gradient(135deg, #1ce783, #168b50);
+}
+
+.icon.hbo {
+    background: linear-gradient(135deg, #5822b4, #9b59b6);
+}
+
+.icon.bbc {
+    background: linear-gradient(135deg, #000, #333);
+}
+
+.icon.prime {
+    background: linear-gradient(135deg, #00a8e1, #146eb4);
+}
 
 .card h3 {
     font-size: 1.3rem;
@@ -482,7 +515,7 @@ a {
     opacity: 0.1;
 }
 
-.cta-box > * {
+.cta-box>* {
     position: relative;
     z-index: 1;
 }
@@ -585,6 +618,65 @@ details p {
     color: var(--text-secondary);
 }
 
+/* ===== Article Pages ===== */
+.article-hero {
+    min-height: 60vh;
+    padding-top: 100px;
+}
+
+.article-content {
+    padding: 60px 24px 100px;
+}
+
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.content-section p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.content-section ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-section ul li {
+    color: var(--text-secondary);
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.content-section ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-1);
+}
+
+.services-grid.small {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.services-grid.small .card {
+    padding: 24px;
+}
+
+.services-grid.small .card h3 {
+    font-size: 1.1rem;
+}
+
 /* ===== Footer ===== */
 .footer {
     padding: 48px 24px;
@@ -602,20 +694,20 @@ details p {
     .nav-links {
         display: none;
     }
-    
+
     .hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .stats {
         flex-direction: column;
         gap: 24px;
     }
-    
+
     .steps {
         flex-direction: column;
     }
-    
+
     .cta-box {
         padding: 40px 24px;
     }

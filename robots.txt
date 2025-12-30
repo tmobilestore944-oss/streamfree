@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tmobilestore944-oss.github.io/streamfree/sitemap.xml
